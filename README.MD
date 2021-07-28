@@ -1,6 +1,6 @@
 <h1>Docker image of php application</h1>
 
-<p>This docker image includes simple web application, which show U "Hello world 1".
+<p>This docker image includes simple golang web application, which show U "Hello world 2".
 
 <h2>Quick start</h2>
 <ul>
