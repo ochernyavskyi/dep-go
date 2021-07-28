@@ -1,13 +1,12 @@
 package main
-
 import (
-	"fmt"
-	"net/http"
-	"github.com/gin-gonic/gin"
-)
+    "net/http"
+    "fmt"
+    )
 
-func HelloWorld(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.html", gin.H{"title": "Hellow world"})
+type msg string
+func (m msg) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+   fmt.Fprint(resp, m)
 }
 
 func main() {
@@ -20,19 +19,6 @@ func main() {
 		fmt.Print("fk u linter hehe")
 	}
 
-}
-
-
-// package main
-// import (
-//     "net/http"
-//     "fmt"
-//     )
-//
-// type msg string
-// func (m msg) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
-//    fmt.Fprint(resp, m)
-// }
 // func main() {
 //     msgHandler := msg("Hello World 2 !")
 //     http.ListenAndServe("0.0.0.0:80", msgHandler)
