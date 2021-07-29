@@ -1,4 +1,4 @@
-<h1>Docker image of golang application</h1>
+<h1>Docker image of go application</h1>
 
 <p>This docker image includes simple golang web application, which show U "Hello world 2".
 
